@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>food pantry near austin, tx (78702) | Findhelp Staff Site (concept: Referral outlook)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="topnav">
+  <a class="brand" href="#" aria-label="findhelp home"><img src="assets/findhelp-logo.svg" alt="findhelp"></a>
+  <div class="topnav-right">
+    <a href="#" class="topnav-link"><i class="fa fa-external-link"></i> Support</a>
+    <a href="#" class="topnav-link">People I'm Helping <i class="fa fa-caret-down"></i></a>
+    <span class="avatar" title="Jordan Lee, Care Coordinator">JL</span>
+  </div>
+</nav>
+
+<div id="category-nav-bar">
+  <div class="cat-search">
+    <form class="free-text" onsubmit="return false">
+      <input type="text" placeholder="ZIP or keyword or program name" aria-label="search">
+      <button type="button" aria-label="search"><i class="fa fa-search"></i></button>
+    </form>
+    <div class="lang">English <i class="fa fa-chevron-down"></i></div>
+  </div>
+  <ul class="cats" id="cats"></ul>
+</div>
+
+<main class="page">
+  <div class="crumbs-row">
+    <div class="crumbs">
+      <span class="crumb">austin, tx (78702)</span><span class="sep">/</span>
+      <span class="crumb">food</span><span class="sep">/</span>
+      <span class="crumb current">food pantry</span>
+      <i class="fa fa-chevron-left pager"></i><span class="count" id="count">1 - 10 of 18</span><i class="fa fa-chevron-right pager"></i>
+    </div>
+    <div class="sort" id="sortByControl">
+      <i class="fa fa-info-circle"></i><span class="sort-label">Sort by</span>
+      <button class="sort-btn active" data-sort="relevance">Relevance</button>
+      <button class="sort-btn" data-sort="closest">Closest</button>
+      <button class="sort-btn" data-sort="outlook">Likely to help <span class="new-pill">New</span></button>
+    </div>
+  </div>
+
+  <div class="filters-row">
+    <button class="filterButton"><i class="fa fa-user"></i> Personal Filters <i class="fa fa-caret-down caret"></i></button>
+    <button class="filterButton"><i class="fa fa-clock-o"></i> Program Filters <i class="fa fa-caret-down caret"></i></button>
+    <button class="filterButton"><i class="fa fa-check-circle-o"></i> Income Eligibility <i class="fa fa-caret-down caret"></i></button>
+  </div>
+
+  <div class="results-layout">
+    <aside class="left-col">
+      <div class="map-box"><div id="map"></div></div>
+
+      <div class="side-card outlook-card" id="selection-card"></div>
+
+      <div class="side-card suggest-box">
+        Notice out-of-date information or see a program you work for? Click <b><i class="fa fa-pencil"></i> Suggest</b> to share an update or claim your program listing to get access to free tools and data.
+      </div>
+    </aside>
+
+    <section class="results" id="results" aria-live="polite"></section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-links"><a href="#">About</a><span>|</span><a href="#">Privacy</a><span>|</span><a href="#">Terms</a><span>|</span><a href="#">Accessibility</a></div>
+  <div class="disclaimer">Unofficial concept demo by Mohith Gajjela. Not affiliated with Findhelp. Synthetic data: programs and organizations are fictional. <a href="https://github.com/Mohith26/findhelp-referral-outlook">Source and method</a></div>
+</footer>
+
+<div class="modal-backdrop" id="modal" hidden>
+  <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-head"><h3 id="modal-title">How accurate is Referral outlook?</h3><button class="modal-x" id="modal-close" aria-label="close"><i class="fa fa-times"></i></button></div>
+    <div class="modal-body" id="modal-body"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script type="module" src="app.js"></script>
+</body>
+</html>
